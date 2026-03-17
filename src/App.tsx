@@ -388,9 +388,10 @@ const App = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-blue-500/20 rounded-full rotate-6 scale-105 blur-xl"></div>
               <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-white/50 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800">
                 <img 
-                  src="/profile.jpg" 
+                  src="https://media.licdn.com/dms/image/v2/D4D03AQFUjFuiKgWAgA/profile-displayphoto-crop_800_800/B4DZfP4rrSGkAI-/0/1751539432988?e=1775088000&v=beta&t=njQ3gX_eR9Qw0yeLti2ru3x1RWrGHhYNMsFGlI7BCLQ" 
                   alt="Marco Gugliandolo" 
                   className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = "https://ui-avatars.com/api/?name=Marco+Gugliandolo&background=10b981&color=fff&size=256";
                   }}

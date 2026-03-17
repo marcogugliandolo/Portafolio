@@ -391,6 +391,9 @@ const App = () => {
                   src="/profile.jpg" 
                   alt="Marco Gugliandolo" 
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://ui-avatars.com/api/?name=Marco+Gugliandolo&background=10b981&color=fff&size=256";
+                  }}
                 />
               </div>
             </motion.div>

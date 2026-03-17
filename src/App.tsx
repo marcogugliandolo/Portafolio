@@ -65,11 +65,11 @@ const App = () => {
     { name: 'Conversor de audio', url: '#', icon: <Music className="w-8 h-8 text-blue-500" /> },
     { name: 'GeoIP', url: '#', icon: <Globe className="w-8 h-8 text-indigo-500" /> },
     { name: 'Criptos', url: '#', icon: <Coins className="w-8 h-8 text-yellow-500" /> },
-    { name: 'Guacamole', url: '#', icon: <Shield className="w-8 h-8 text-green-500" /> },
-    { name: 'Grafana', url: '#', icon: <LineChart className="w-8 h-8 text-orange-500" /> },
-    { name: 'Portainer', url: '#', icon: <Box className="w-8 h-8 text-cyan-500" /> },
-    { name: 'Kuma', url: '#', icon: <Activity className="w-8 h-8 text-red-500" /> },
-    { name: 'Herramientas', url: '#', icon: <Wrench className="w-8 h-8 text-zinc-500" /> },
+    { name: 'Guacamole', url: 'https://guacamole.marcogugliandolo.com', icon: <Shield className="w-8 h-8 text-green-500" /> },
+    { name: 'Grafana', url: 'https://grafana.marcogugliandolo.com', icon: <LineChart className="w-8 h-8 text-orange-500" /> },
+    { name: 'Portainer', url: 'https://portainer.marcogugliandolo.com', icon: <Box className="w-8 h-8 text-cyan-500" /> },
+    { name: 'Kuma', url: 'https://kuma.marcogugliandolo.com', icon: <Activity className="w-8 h-8 text-red-500" /> },
+    { name: 'Herramientas', url: 'https://herramientas.marcogugliandolo.com', icon: <Wrench className="w-8 h-8 text-zinc-500" /> },
     { name: 'Curriculum', url: '#', icon: <FileText className="w-8 h-8 text-blue-400" /> },
     { name: 'Pruebas', url: '#', icon: <FlaskConical className="w-8 h-8 text-purple-500" /> },
   ];
@@ -460,6 +460,8 @@ const App = () => {
                     <a 
                       key={idx}
                       href={program.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group flex flex-col items-center gap-3 p-4 rounded-3xl hover:bg-white/50 dark:hover:bg-white/5 transition-all cursor-pointer"
                     >
                       <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-gradient-to-br from-white to-zinc-100 dark:from-zinc-800 dark:to-zinc-900 shadow-sm border border-black/5 dark:border-white/5 flex items-center justify-center group-hover:scale-105 group-hover:shadow-md transition-all duration-300">

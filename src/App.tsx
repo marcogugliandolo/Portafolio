@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring, useMotionValue, useTransform } from 'motion/react';
-import { Github, Linkedin, Mail, ExternalLink, Terminal, Database, Server, Code2, Menu, X, ArrowRight, Globe, Download, Sun, Moon, Cpu, Music, Coins, Shield, LineChart, Box, Activity, Wrench, FileText, FlaskConical, LayoutGrid, AppWindow, Sparkles } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Terminal, Database, Server, Code2, Menu, X, ArrowRight, Globe, Download, Sun, Moon, Cpu, Music, Coins, Shield, LineChart, Box, Activity, Wrench, FileText, FlaskConical, LayoutGrid, AppWindow, Sparkles, Headphones } from 'lucide-react';
 
 const ProjectCard = ({ project, index }: any) => {
   const mouseX = useMotionValue(0);
@@ -132,13 +132,14 @@ const App = () => {
     { name: 'Experiencia', href: '#experience' },
     { name: 'Proyectos', href: '#portfolio' },
     { name: 'Sobre mí', href: '#about' },
+    { name: 'Intereses', href: '#likes' },
     { name: 'Contacto', href: '#contact' },
   ];
 
   const services = [
     { 
       title: 'Desarrollo Web', 
-      description: 'Creación de aplicaciones web dinámicas, escalables y optimizadas usando PHP, HTML5, CSS3 y JavaScript.', 
+      description: 'Creación de aplicaciones web dinámicas, escalables y optimizadas usando tecnologías modernas como HTML5, CSS3 y JavaScript.', 
       icon: <Globe className="w-6 h-6 text-emerald-500 dark:text-emerald-400" /> 
     },
     { 
@@ -195,7 +196,7 @@ const App = () => {
   ];
 
   const skills = [
-    'Administración de Sistemas', 'Desarrollo Web', 'PHP', 'Bases de Datos (DBA)', 'HTML5', 'CSS3', 'JavaScript', 'Redes'
+    'Administración de Sistemas', 'Desarrollo Web', 'Docker', 'Bases de Datos (DBA)', 'HTML5', 'CSS3', 'JavaScript', 'Redes'
   ];
 
   return (
@@ -219,9 +220,9 @@ const App = () => {
 
       {/* Apple-style Ambient Background */}
       <div className="fixed inset-0 z-[-1] overflow-hidden bg-zinc-50 dark:bg-black transition-colors duration-300">
-        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-emerald-300/40 dark:bg-emerald-900/40 mix-blend-multiply dark:mix-blend-screen filter blur-[100px] opacity-70 animate-blob"></div>
-        <div className="absolute top-[20%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-blue-300/40 dark:bg-blue-900/40 mix-blend-multiply dark:mix-blend-screen filter blur-[120px] opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-[-20%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-purple-300/40 dark:bg-purple-900/40 mix-blend-multiply dark:mix-blend-screen filter blur-[150px] opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[350px] h-[350px] md:w-[50vw] md:h-[50vw] rounded-full bg-emerald-400/30 dark:bg-emerald-500/20 mix-blend-multiply dark:mix-blend-screen filter blur-[80px] md:blur-[100px] opacity-80 md:opacity-70 animate-blob"></div>
+        <div className="absolute top-[20%] right-[-10%] w-[300px] h-[300px] md:w-[40vw] md:h-[40vw] rounded-full bg-blue-400/30 dark:bg-blue-500/20 mix-blend-multiply dark:mix-blend-screen filter blur-[80px] md:blur-[120px] opacity-80 md:opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-[-20%] left-[20%] w-[400px] h-[400px] md:w-[60vw] md:h-[60vw] rounded-full bg-purple-400/30 dark:bg-purple-500/20 mix-blend-multiply dark:mix-blend-screen filter blur-[80px] md:blur-[150px] opacity-80 md:opacity-70 animate-blob animation-delay-4000"></div>
       </div>
 
       {/* Navigation */}
@@ -352,6 +353,16 @@ const App = () => {
               </div>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[1.05] mb-8 bg-clip-text text-transparent bg-gradient-to-b from-black to-zinc-600 dark:from-white dark:to-zinc-500">
+                <span className="block text-xl md:text-3xl font-medium mb-3 text-zinc-800 dark:text-zinc-200">
+                  ¡Hola! Soy Marco{' '}
+                  <motion.span 
+                    className="inline-block origin-[70%_70%]"
+                    animate={{ rotate: [0, 14, -8, 14, -4, 10, 0, 0] }}
+                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    👋
+                  </motion.span>
+                </span>
                 Desarrollador Web <br className="hidden md:block" />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-blue-500">& Administrador de Sistemas.</span>
               </h1>
@@ -464,13 +475,13 @@ const App = () => {
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Sobre mí</h2>
                 <div className="space-y-4 text-zinc-600 dark:text-zinc-400 font-light leading-relaxed mb-8">
                   <p>
-                    Soy Administrador de Sistemas Informáticos en Red. He creado este sitio web como un espacio para mostrar algunas de las aplicaciones que he desarrollado, especialmente en el ámbito del desarrollo web.
+                    Soy Administrador de Sistemas Informáticos en Red. Monté este rincón digital para enseñar un poco lo que hago, sobre todo en desarrollo web y despliegue de servicios.
                   </p>
                   <p>
-                    La mayoría de mis proyectos están realizados en PHP, aunque también utilizo otras tecnologías como HTML5, CSS y JavaScript para crear experiencias completas.
+                    Me muevo con soltura por el desarrollo web, dándole forma al frontend con HTML5, CSS y JavaScript. Pero donde realmente me lo paso bien es trasteando con servidores y la cultura self-hosted: uso Docker y Portainer a diario para levantar y gestionar mis propios contenedores.
                   </p>
                   <p>
-                    Este espacio me permite compartir parte del trabajo que realizo y seguir aprendiendo en el proceso, combinando mi pasión por la programación con la administración de sistemas.
+                    Últimamente también estoy integrando herramientas de Inteligencia Artificial (IA) para automatizar procesos y probar cosas nuevas. Al final, este portfolio es mi forma de unir mis dos grandes pasiones: escribir código y administrar sistemas.
                   </p>
                 </div>
               </motion.div>
@@ -507,6 +518,46 @@ const App = () => {
                   </div>
                 </div>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Things I Like Section */}
+        <section id="likes" className="py-24 transition-colors duration-300 bg-black/5 dark:bg-white/5 border-y border-black/5 dark:border-white/5">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="mb-16 md:text-center">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 flex items-center md:justify-center gap-3">
+                <Sparkles className="w-8 h-8 text-emerald-500" />
+                Más allá del código
+              </h2>
+              <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+                Porque no todo va a ser estar delante de una pantalla (bueno, a veces sí).
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: 'Música, Podcasts y Series', desc: 'Me encanta acompañar mi tiempo delante del ordenador con buena música o un podcast interesante, y desconectar viendo películas o series.', icon: <Headphones className="w-6 h-6 text-purple-500" /> },
+                { title: 'Cacharrear', desc: 'Explorar nuevas tecnologías, montar servidores y probar hardware.', icon: <Cpu className="w-6 h-6 text-blue-500" /> },
+                { title: 'Aprender', desc: 'Descubrir cosas nuevas cada día y mejorar mis habilidades.', icon: <FlaskConical className="w-6 h-6 text-emerald-500" /> }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="bg-white/60 dark:bg-zinc-900/40 backdrop-blur-2xl border border-white/40 dark:border-white/10 rounded-3xl p-6 md:p-8 hover:bg-white/80 dark:hover:bg-zinc-900/60 transition-all duration-500 shadow-sm group"
+                >
+                  <div className="mb-6 w-12 h-12 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center border border-black/10 dark:border-white/10 group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>

@@ -60,18 +60,14 @@ const App = () => {
   ];
 
   const programsList = [
-    { name: 'Panel de Control Raspberry Pi - 1', url: '#', icon: <Cpu className="w-8 h-8 text-emerald-500" /> },
-    { name: 'Panel de Control Raspberry Pi - 2', url: '#', icon: <Cpu className="w-8 h-8 text-emerald-600" /> },
-    { name: 'Conversor de audio', url: '#', icon: <Music className="w-8 h-8 text-blue-500" /> },
-    { name: 'GeoIP', url: '#', icon: <Globe className="w-8 h-8 text-indigo-500" /> },
-    { name: 'Criptos', url: '#', icon: <Coins className="w-8 h-8 text-yellow-500" /> },
+    { name: 'Panel de Control Raspberry Pi - 1', url: 'https://panel1.marcogugliandolo.com', icon: <Cpu className="w-8 h-8 text-emerald-500" /> },
+    { name: 'Panel de Control Raspberry Pi - 2', url: 'https://panel2.marcogugliandolo.com', icon: <Cpu className="w-8 h-8 text-emerald-600" /> },
     { name: 'Guacamole', url: 'https://guacamole.marcogugliandolo.com', icon: <Shield className="w-8 h-8 text-green-500" /> },
     { name: 'Grafana', url: 'https://grafana.marcogugliandolo.com', icon: <LineChart className="w-8 h-8 text-orange-500" /> },
     { name: 'Portainer', url: 'https://portainer.marcogugliandolo.com', icon: <Box className="w-8 h-8 text-cyan-500" /> },
     { name: 'Kuma', url: 'https://kuma.marcogugliandolo.com', icon: <Activity className="w-8 h-8 text-red-500" /> },
     { name: 'Herramientas', url: 'https://herramientas.marcogugliandolo.com', icon: <Wrench className="w-8 h-8 text-zinc-500" /> },
-    { name: 'Curriculum', url: '#', icon: <FileText className="w-8 h-8 text-blue-400" /> },
-    { name: 'Pruebas', url: '#', icon: <FlaskConical className="w-8 h-8 text-purple-500" /> },
+    { name: 'Curriculum', url: 'https://curriculum.marcogugliandolo.com', icon: <FileText className="w-8 h-8 text-blue-400" /> },
   ];
 
   const projects = [
@@ -126,7 +122,7 @@ const App = () => {
           </a>
           
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
                 {link.name}
@@ -153,7 +149,7 @@ const App = () => {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="md:hidden flex items-center gap-4">
+          <div className="lg:hidden flex items-center gap-4">
             <button 
               onClick={toggleTheme} 
               className="flex items-center gap-2 p-2 rounded-full bg-black/5 dark:bg-white/5 text-zinc-600 dark:text-zinc-400"
@@ -175,15 +171,15 @@ const App = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-white/95 dark:bg-black/95 backdrop-blur-2xl pt-24 px-6 md:hidden"
+            className="fixed inset-0 z-40 bg-white/95 dark:bg-black/95 backdrop-blur-2xl pt-32 px-6 lg:hidden flex flex-col items-center"
           >
-            <div className="flex flex-col gap-6 text-2xl font-light">
+            <div className="flex flex-col items-center gap-8 text-3xl font-light w-full max-w-sm">
               {navLinks.map((link) => (
                 <a 
                   key={link.name} 
                   href={link.href} 
                   onClick={() => setMobileMenuOpen(false)}
-                  className="border-b border-black/10 dark:border-white/10 pb-4 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
+                  className="w-full text-center border-b border-black/5 dark:border-white/5 pb-6 text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 >
                   {link.name}
                 </a>
@@ -202,7 +198,7 @@ const App = () => {
             transition={{ duration: 0.5 }}
             className="max-w-4xl"
           >
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[1.05] mb-8 bg-clip-text text-transparent bg-gradient-to-b from-black to-zinc-600 dark:from-white dark:to-zinc-500">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tighter leading-[1.05] mb-8 bg-clip-text text-transparent bg-gradient-to-b from-black to-zinc-600 dark:from-white dark:to-zinc-500">
               Desarrollador Web <br className="hidden md:block" />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-blue-500">& Administrador de Sistemas.</span>
             </h1>
@@ -210,9 +206,14 @@ const App = () => {
               Hola, soy Marco Gugliandolo López. Construyo aplicaciones web robustas, gestiono bases de datos y aseguro infraestructuras. Bienvenido a mi espacio digital.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#portfolio" className="px-6 py-3 rounded-full bg-emerald-500 text-white dark:text-zinc-950 font-semibold hover:bg-emerald-600 dark:hover:bg-emerald-400 transition-colors flex items-center gap-2">
+              <motion.a 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="#portfolio" 
+                className="px-6 py-3 rounded-full bg-emerald-500 text-white dark:text-zinc-950 font-semibold hover:bg-emerald-600 dark:hover:bg-emerald-400 transition-colors flex items-center gap-2 shadow-lg shadow-emerald-500/20"
+              >
                 Ver proyectos <ArrowRight className="w-4 h-4" />
-              </a>
+              </motion.a>
             </div>
           </motion.div>
         </section>
@@ -225,7 +226,7 @@ const App = () => {
               <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">Tecnologías y áreas en las que me especializo.</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((service, index) => (
                 <motion.div
                   key={service.title}
@@ -255,7 +256,7 @@ const App = () => {
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Proyectos Destacados</h2>
               <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl">Una selección de herramientas y servicios que he desplegado y desarrollado.</p>
             </div>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-sm font-medium">
+            <a href="https://github.com/marcogugliandolo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors text-sm font-medium">
               <Github className="w-4 h-4" /> Ver GitHub
             </a>
           </div>
@@ -317,7 +318,7 @@ const App = () => {
         {/* About Section */}
         <section id="about" className="py-24 transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -336,9 +337,14 @@ const App = () => {
                     Este espacio me permite compartir parte del trabajo que realizo y seguir aprendiendo en el proceso, combinando mi pasión por la programación con la administración de sistemas.
                   </p>
                 </div>
-                <a href="#contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20 transition-colors text-sm font-medium text-zinc-900 dark:text-white">
+                <motion.a 
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="#contact" 
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/5 hover:bg-black/10 dark:bg-white/10 dark:hover:bg-white/20 transition-colors text-sm font-medium text-zinc-900 dark:text-white"
+                >
                   <Download className="w-4 h-4" /> Descargar CV
-                </a>
+                </motion.a>
               </motion.div>
               
               <motion.div
@@ -383,25 +389,30 @@ const App = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
-                <a href="mailto:marcogugliandolo94@gmail.com" className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-full bg-emerald-500 text-white dark:text-zinc-950 font-bold text-base sm:text-lg hover:bg-emerald-600 dark:hover:bg-emerald-400 transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(16,185,129,0.2)] dark:shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.3)] dark:hover:shadow-[0_0_40px_rgba(16,185,129,0.5)]">
+                <motion.a 
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="mailto:contacto@marcogugliandolo.com" 
+                  className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-full bg-emerald-500 text-white dark:text-zinc-950 font-bold text-base sm:text-lg hover:bg-emerald-600 dark:hover:bg-emerald-400 transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(16,185,129,0.2)] dark:shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.3)] dark:hover:shadow-[0_0_40px_rgba(16,185,129,0.5)]"
+                >
                   <Mail className="w-5 h-5" /> Enviar un correo
-                </a>
+                </motion.a>
               </div>
 
               <div className="flex justify-center gap-6">
-                <a href="mailto:marcogugliandolo94@gmail.com" className="group flex flex-col items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <a href="mailto:contacto@marcogugliandolo.com" className="group flex flex-col items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   <div className="p-4 rounded-full bg-white dark:bg-black border border-black/10 dark:border-white/10 group-hover:border-emerald-500/50 transition-all shadow-sm dark:shadow-none">
                     <Mail className="w-6 h-6" />
                   </div>
                   <span className="text-xs font-medium uppercase tracking-wider">Email</span>
                 </a>
-                <a href="#" className="group flex flex-col items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <a href="https://es.linkedin.com/in/marco-gugliandolo-l%C3%B3pez-692a7b147" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   <div className="p-4 rounded-full bg-white dark:bg-black border border-black/10 dark:border-white/10 group-hover:border-emerald-500/50 transition-all shadow-sm dark:shadow-none">
                     <Linkedin className="w-6 h-6" />
                   </div>
                   <span className="text-xs font-medium uppercase tracking-wider">LinkedIn</span>
                 </a>
-                <a href="#" className="group flex flex-col items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <a href="https://github.com/marcogugliandolo" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   <div className="p-4 rounded-full bg-white dark:bg-black border border-black/10 dark:border-white/10 group-hover:border-emerald-500/50 transition-all shadow-sm dark:shadow-none">
                     <Github className="w-6 h-6" />
                   </div>
@@ -415,11 +426,8 @@ const App = () => {
 
       {/* Footer */}
       <footer className="py-8 border-t border-black/5 dark:border-white/5 text-center text-zinc-500 text-sm bg-transparent transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-6 flex justify-center items-center gap-4">
-          <div className="flex items-center gap-2">
-            <span>Construido con</span>
-            <Code2 className="w-4 h-4" />
-          </div>
+        <div className="max-w-7xl mx-auto px-6 flex justify-center items-center">
+          <span>Construido por Marco Gugliandolo López</span>
         </div>
       </footer>
 

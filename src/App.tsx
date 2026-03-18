@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring, useMotionValue, useTransform } from 'motion/react';
-import { Github, Linkedin, Mail, ExternalLink, Terminal, Database, Server, Code2, Menu, X, ArrowRight, Globe, Download, Sun, Moon, Cpu, Music, Coins, Shield, LineChart, Box, Activity, Wrench, FileText, FlaskConical, LayoutGrid, AppWindow, Sparkles, Headphones, TrendingUp, Tv } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Terminal, Database, Server, Code2, Menu, X, ArrowRight, Globe, Download, Sun, Moon, Cpu, Music, Coins, Shield, LineChart, Box, Activity, Wrench, FileText, FlaskConical, LayoutGrid, AppWindow, Sparkles, Headphones, Tv, Wallet } from 'lucide-react';
 
 const ProjectCard = ({ project, index }: any) => {
   const mouseX = useMotionValue(0);
@@ -163,8 +163,8 @@ const App = () => {
     { name: 'Kuma', url: 'https://kuma.marcogugliandolo.com', icon: <Activity className="w-8 h-8 text-red-500" /> },
     { name: 'Herramientas', url: 'https://herramientas.marcogugliandolo.com', icon: <Wrench className="w-8 h-8 text-zinc-500" /> },
     { name: 'Curriculum', url: 'https://curriculum.marcogugliandolo.com', icon: <FileText className="w-8 h-8 text-blue-400" /> },
-    { name: 'Alza', url: 'https://alza.finance', icon: <TrendingUp className="w-8 h-8 text-emerald-400" /> },
     { name: 'Jellyfin', url: 'https://tv.marcogugliandolo.com', icon: <Tv className="w-8 h-8 text-purple-500" /> },
+    { name: 'Alza', url: 'https://alza.finance', icon: <Wallet className="w-8 h-8 text-emerald-400" /> },
   ];
 
   const projects = [
@@ -230,20 +230,9 @@ const App = () => {
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/80 dark:bg-black/80 backdrop-blur-xl border-b border-black/5 dark:border-white/5 py-3 shadow-lg shadow-black/5' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-          <a href="#home" className="text-xl font-bold tracking-tighter flex items-center gap-3 group">
-            <div className="relative flex items-center justify-center w-10 h-10">
-              <div className="absolute inset-0 bg-emerald-500/20 rounded-full blur-md group-hover:blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full relative z-10 group-hover:rotate-90 transition-transform duration-700 ease-in-out">
-                <path d="M16 3L3 10.5V21.5L16 29L29 21.5V10.5L16 3Z" stroke="url(#hex-gradient)" strokeWidth="2.5" strokeLinejoin="round"/>
-                <path d="M16 3V16M3 10.5L16 16M29 10.5L16 16M16 29V16M3 21.5L16 16M29 21.5L16 16" className="stroke-zinc-300 dark:stroke-zinc-700" strokeWidth="1" strokeLinejoin="round"/>
-                <circle cx="16" cy="16" r="3" className="fill-emerald-500" />
-                <defs>
-                  <linearGradient id="hex-gradient" x1="16" y1="3" x2="16" y2="29" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#10B981" />
-                    <stop offset="1" stopColor="#3B82F6" />
-                  </linearGradient>
-                </defs>
-              </svg>
+          <a href="#home" className="text-xl font-bold tracking-tighter flex items-center gap-2 group">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center text-white group-hover:rotate-12 transition-transform duration-300">
+              <Terminal className="w-6 h-6" />
             </div>
             <span className="hidden sm:block">Marco Gugliandolo López<span className="text-emerald-500">.</span></span>
           </a>

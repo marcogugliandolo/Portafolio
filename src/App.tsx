@@ -35,14 +35,14 @@ const ProjectCard = ({ project, index }: any) => {
           ),
         }}
       />
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col h-full">
         <div className="mb-8 bg-zinc-50 dark:bg-black w-20 h-20 rounded-2xl flex items-center justify-center border border-black/5 dark:border-white/5 group-hover:border-emerald-500/30 transition-colors">
           {project.icon}
         </div>
         <h3 className="text-2xl font-bold mb-4 transition-colors flex items-center justify-between group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
           {project.title}
         </h3>
-        <p className="text-zinc-600 dark:text-zinc-400 text-base mb-8 flex-grow leading-relaxed">
+        <p className="text-zinc-600 dark:text-zinc-400 text-base mb-8 leading-relaxed">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2 mb-8">

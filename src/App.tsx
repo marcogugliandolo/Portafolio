@@ -155,8 +155,7 @@ const App = () => {
   ];
 
   const programsList = [
-    { name: 'Panel de Control Raspberry Pi - 1', url: 'https://panel1.marcogugliandolo.com', icon: <Cpu className="w-8 h-8 text-emerald-500" /> },
-    { name: 'Panel de Control Raspberry Pi - 2', url: 'https://panel2.marcogugliandolo.com', icon: <Cpu className="w-8 h-8 text-emerald-600" /> },
+    { name: 'Panel Server', url: 'https://panel.marcogugliandolo.com', icon: <Server className="w-8 h-8 text-emerald-500" /> },
     { name: 'Guacamole', url: 'https://guacamole.marcogugliandolo.com', icon: <Shield className="w-8 h-8 text-green-500" /> },
     { name: 'Grafana', url: 'https://grafana.marcogugliandolo.com', icon: <LineChart className="w-8 h-8 text-orange-500" /> },
     { name: 'Portainer', url: 'https://portainer.marcogugliandolo.com', icon: <Box className="w-8 h-8 text-cyan-500" /> },

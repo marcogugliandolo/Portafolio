@@ -170,13 +170,13 @@ const App = () => {
 
   const projects = [
     {
-      title: 'PhpMyAdmin',
-      description: 'Gestión de bases de datos MySQL a través de interfaz web.',
+      title: 'Gestión de Bases de Datos',
+      description: 'Administración y consulta de bases de datos SQL mediante interfaz web profesional.',
       links: [
-        { label: 'Acceder a PhpMyAdmin', url: 'https://mysql.marcogugliandolo.com/phpmyadmin' }
+        { label: 'Acceder al Gestor', url: 'https://bbdd.marcogugliandolo.com' }
       ],
       icon: <Database className="w-8 h-8 text-emerald-500 dark:text-emerald-400" />,
-      tags: ['MySQL', 'DBA', 'Herramientas'],
+      tags: ['SQL', 'DBA', 'Herramientas'],
     },
     {
       title: 'Owncloud',

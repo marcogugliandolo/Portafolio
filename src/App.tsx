@@ -166,6 +166,7 @@ const App = () => {
     { name: 'Alza', url: 'https://alza.finance', icon: <Wallet className="w-8 h-8 text-emerald-400" /> },
     { name: 'n8n', url: 'https://n8n.marcogugliandolo.com', icon: <Workflow className="w-8 h-8 text-rose-500" /> },
     { name: 'Plazafy', url: 'https://plazafy.es', icon: <SquareParking className="w-8 h-8 text-blue-500" /> },
+    { name: 'npm', url: 'https://npm.marcogugliandolo.com', icon: <Globe className="w-8 h-8 text-emerald-400" /> },
   ];
 
   const projects = [
@@ -179,10 +180,10 @@ const App = () => {
       tags: ['SQL', 'DBA', 'Herramientas'],
     },
     {
-      title: 'Owncloud',
+      title: 'Nextcloud',
       description: 'Servidor de almacenamiento en la nube autoalojado para sincronización y compartición de archivos.',
       links: [
-        { label: 'Acceder a Owncloud', url: 'https://nube.marcogugliandolo.com/owncloud' }
+        { label: 'Acceder a Nextcloud', url: 'https://nube.marcogugliandolo.com/login' }
       ],
       icon: <Server className="w-8 h-8 text-blue-500 dark:text-blue-400" />,
       tags: ['Cloud', 'SysAdmin', 'Almacenamiento'],

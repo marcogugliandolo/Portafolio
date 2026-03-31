@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring, useMotionValue, useTransform } from 'motion/react';
-import { Github, Linkedin, Mail, ExternalLink, Terminal, Database, Server, Code2, Menu, X, ArrowRight, Globe, Download, Sun, Moon, Cpu, Music, Coins, Shield, LineChart, Box, Activity, Wrench, FileText, FlaskConical, LayoutGrid, AppWindow, Sparkles, Headphones, Tv, Wallet, Workflow, Store, SquareParking, Search } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Terminal, Database, Server, Code2, Menu, X, ArrowRight, Globe, Download, Sun, Moon, Cpu, Music, Coins, Shield, LineChart, Box, Activity, Wrench, FileText, FlaskConical, LayoutGrid, AppWindow, Sparkles, Headphones, Tv, Wallet, Workflow, Store, SquareParking } from 'lucide-react';
 
 const ProjectCard = ({ project, index }: any) => {
   const mouseX = useMotionValue(0);
@@ -166,7 +166,6 @@ const App = () => {
     { name: 'Alza', url: 'https://alza.finance', icon: <Wallet className="w-8 h-8 text-emerald-400" /> },
     { name: 'n8n', url: 'https://n8n.marcogugliandolo.com', icon: <Workflow className="w-8 h-8 text-rose-500" /> },
     { name: 'Plazafy', url: 'https://plazafy.es', icon: <SquareParking className="w-8 h-8 text-blue-500" /> },
-    { name: 'Google', url: 'https://google.es', icon: <Search className="w-8 h-8 text-blue-400" /> },
   ];
 
   const projects = [

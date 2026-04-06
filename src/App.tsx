@@ -6,7 +6,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring, useMotionValue, useTransform } from 'motion/react';
 import { Github, Linkedin, Mail, ExternalLink, Terminal, Database, Server, Code2, Menu, X, ArrowRight, Globe, Download, Sun, Moon, Cpu, Music, Coins, Shield, LineChart, Box, Activity, Wrench, FileText, FlaskConical, LayoutGrid, AppWindow, Sparkles, Headphones, Tv, Wallet, Workflow, Store, SquareParking } from 'lucide-react';
-import profileImg from './assets/profile.jpg';
 
 const ProjectCard = ({ project, index }: any) => {
   const mouseX = useMotionValue(0);
@@ -404,7 +403,7 @@ const App = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-blue-500/20 rounded-full rotate-6 scale-105 blur-xl"></div>
               <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-white/50 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-800">
                 <img 
-                  src={profileImg} 
+                  src="https://github.com/marcogugliandolo.png" 
                   alt="Marco Gugliandolo" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

@@ -409,7 +409,9 @@ const App = () => {
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://ui-avatars.com/api/?name=Marco+Gugliandolo&background=10b981&color=fff&size=256";
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = "https://ui-avatars.com/api/?name=Marco+Gugliandolo&background=10b981&color=fff&size=256";
                   }}
                 />
               </div>

@@ -159,6 +159,7 @@ const App = () => {
     { name: 'Guacamole', url: 'https://guacamole.marcogugliandolo.com', icon: <Shield className="w-8 h-8 text-green-500" /> },
     { name: 'Grafana', url: 'https://grafana.marcogugliandolo.com', icon: <LineChart className="w-8 h-8 text-orange-500" /> },
     { name: 'Portainer', url: 'https://portainer.marcogugliandolo.com', icon: <Box className="w-8 h-8 text-cyan-500" /> },
+    { name: 'KreaPC', url: 'https://kreapc.marcogugliandolo.com', icon: <Cpu className="w-8 h-8 text-indigo-500" /> },
     { name: 'Kuma', url: 'https://kuma.marcogugliandolo.com', icon: <Activity className="w-8 h-8 text-red-500" /> },
     { name: 'Herramientas', url: 'https://herramientas.marcogugliandolo.com', icon: <Wrench className="w-8 h-8 text-zinc-500" /> },
     { name: 'Curriculum', url: 'https://curriculum.marcogugliandolo.com', icon: <FileText className="w-8 h-8 text-blue-400" /> },

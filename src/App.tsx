@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring, useMotionValue, useTransform } from 'motion/react';
-import { Github, Linkedin, Mail, ExternalLink, Terminal, Database, Server, Code2, Menu, X, ArrowRight, Globe, Download, Sun, Moon, Cpu, Music, Coins, Shield, LineChart, Box, Activity, Wrench, FileText, FlaskConical, LayoutGrid, AppWindow, Sparkles, Headphones, Tv, Wallet, Workflow, Store, SquareParking } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Terminal, Database, Server, Code2, Menu, X, ArrowRight, Globe, Download, Sun, Moon, Cpu, Music, Coins, Shield, LineChart, Box, Activity, Wrench, FileText, FlaskConical, LayoutGrid, AppWindow, Sparkles, Headphones, Tv, Wallet, Workflow, Store, SquareParking, Car } from 'lucide-react';
 
 const ProjectCard = ({ project, index }: any) => {
   const mouseX = useMotionValue(0);
@@ -160,6 +160,7 @@ const App = () => {
     { name: 'Grafana', url: 'https://grafana.marcogugliandolo.com', icon: <LineChart className="w-8 h-8 text-orange-500" /> },
     { name: 'Portainer', url: 'https://portainer.marcogugliandolo.com', icon: <Box className="w-8 h-8 text-cyan-500" /> },
     { name: 'KreaPC', url: 'https://kreapc.marcogugliandolo.com', icon: <Cpu className="w-8 h-8 text-indigo-500" /> },
+    { name: 'GTaxi', url: 'https://taxi.marcogugliandolo.com', icon: <Car className="w-8 h-8 text-yellow-500" /> },
     { name: 'Kuma', url: 'https://kuma.marcogugliandolo.com', icon: <Activity className="w-8 h-8 text-red-500" /> },
     { name: 'Herramientas', url: 'https://herramientas.marcogugliandolo.com', icon: <Wrench className="w-8 h-8 text-zinc-500" /> },
     { name: 'Curriculum', url: 'https://curriculum.marcogugliandolo.com', icon: <FileText className="w-8 h-8 text-blue-400" /> },

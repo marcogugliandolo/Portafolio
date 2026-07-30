@@ -7,6 +7,28 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring, useMotionValue, useTransform } from 'motion/react';
 import { Github, Linkedin, Mail, ExternalLink, Terminal, Database, Server, Code2, Menu, X, ArrowRight, Globe, Download, Sun, Moon, Cpu, Music, Coins, Shield, LineChart, Box, Activity, Wrench, FileText, FlaskConical, LayoutGrid, AppWindow, Sparkles, Headphones, Tv, Wallet, Workflow, Store, SquareParking, Car } from 'lucide-react';
 
+const DanceIcon = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <circle cx="12" cy="4" r="2" />
+    <path d="M12 6v8" />
+    <path d="M8 3l4 4" />
+    <path d="M12 7l4 3 2-2" />
+    <path d="M12 14l-3 4-2-1" />
+    <path d="M12 14l3 5h2" />
+  </svg>
+);
+
 const ProjectCard = ({ project, index }: any) => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -161,6 +183,7 @@ const App = () => {
     { name: 'Portainer', url: 'https://portainer.marcogugliandolo.com', icon: <Box className="w-8 h-8 text-cyan-500" /> },
     { name: 'KreaPC', url: 'https://kreapc.marcogugliandolo.com', icon: <Cpu className="w-8 h-8 text-indigo-500" /> },
     { name: 'GTaxi', url: 'https://taxi.marcogugliandolo.com', icon: <Car className="w-8 h-8 text-yellow-500" /> },
+    { name: 'SalsaNova', url: 'https://salsanova.marcogugliandolo.com', icon: <DanceIcon className="w-8 h-8 text-pink-500" /> },
     { name: 'Kuma', url: 'https://kuma.marcogugliandolo.com', icon: <Activity className="w-8 h-8 text-red-500" /> },
     { name: 'Herramientas', url: 'https://herramientas.marcogugliandolo.com', icon: <Wrench className="w-8 h-8 text-zinc-500" /> },
     { name: 'Curriculum', url: 'https://curriculum.marcogugliandolo.com', icon: <FileText className="w-8 h-8 text-blue-400" /> },

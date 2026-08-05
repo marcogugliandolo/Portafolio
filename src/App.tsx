@@ -184,6 +184,7 @@ const App = () => {
     { name: 'KreaPC', url: 'https://kreapc.marcogugliandolo.com', icon: <Cpu className="w-8 h-8 text-indigo-500" /> },
     { name: 'GTaxi', url: 'https://taxi.marcogugliandolo.com', icon: <Car className="w-8 h-8 text-yellow-500" /> },
     { name: 'SalsaNova', url: 'https://salsanova.marcogugliandolo.com', icon: <DanceIcon className="w-8 h-8 text-pink-500" /> },
+    { name: 'Lumaira', url: 'https://lumaira.marcogugliandolo.com', icon: <Sparkles className="w-8 h-8 text-fuchsia-500" /> },
     { name: 'Kuma', url: 'https://kuma.marcogugliandolo.com', icon: <Activity className="w-8 h-8 text-red-500" /> },
     { name: 'Herramientas', url: 'https://herramientas.marcogugliandolo.com', icon: <Wrench className="w-8 h-8 text-zinc-500" /> },
     { name: 'Curriculum', url: 'https://curriculum.marcogugliandolo.com', icon: <FileText className="w-8 h-8 text-blue-400" /> },

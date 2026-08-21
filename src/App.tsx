@@ -182,7 +182,7 @@ const App = () => {
     { name: 'Grafana', url: 'https://grafana.marcogugliandolo.com', icon: <LineChart className="w-8 h-8 text-orange-500" /> },
     { name: 'Portainer', url: 'https://portainer.marcogugliandolo.com', icon: <Box className="w-8 h-8 text-cyan-500" /> },
     { name: 'KreaPC', url: 'https://kreapc.marcogugliandolo.com', icon: <Cpu className="w-8 h-8 text-indigo-500" /> },
-    { name: 'GTaxi', url: 'https://taxi.marcogugliandolo.com', icon: <Car className="w-8 h-8 text-yellow-500" /> },
+    { name: 'VaixaTaxi', url: 'https://vaixataxi.es', icon: <Car className="w-8 h-8 text-yellow-500" /> },
     { name: 'SalsaNova', url: 'https://salsanova.marcogugliandolo.com', icon: <DanceIcon className="w-8 h-8 text-pink-500" /> },
     { name: 'Lumaira', url: 'https://lumaira.marcogugliandolo.com', icon: <Sparkles className="w-8 h-8 text-fuchsia-500" /> },
     { name: 'Kuma', url: 'https://kuma.marcogugliandolo.com', icon: <Activity className="w-8 h-8 text-red-500" /> },
